@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Web3Care – Privacy-first stroke recovery companion (pre-MVP)</title>
   <link rel="icon" href="data:," />
+  <meta name="description" content="Web3Care (pre-MVP) is a privacy-first PWA to help families navigating stroke recovery track care and receive a daily non-PHI SMS summary." />
   <style>
     :root{--bg:#0b1020;--card:#141a2e;--txt:#e7ecff;--muted:#a7b0d8;--brand:#7c4dff;--line:#222946}
-    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#0b1020,#0b0f1a);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b1020,#0b0f1a);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
     .wrap{max-width:1080px;margin:0 auto;padding:28px}
     .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
     .logo{display:flex;gap:10px;align-items:center;font-weight:700}
@@ -29,6 +31,8 @@
     @media(min-width:980px){.hero{grid-template-columns:1.05fr .95fr}}
     .hero img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);background:#0b1020}
     a{color:#c9d0ff}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
   </style>
 </head>
 <body>
@@ -60,7 +64,7 @@
         <p class="muted" style="font-size:12px">.app domains are HTTPS-only (HSTS). No PHI is stored on servers.</p>
       </div>
       <div>
-        <img src="assets/hero.png" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
+        <img src="assets/hero.png?v=1" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
       </div>
     </section>
 
@@ -131,5 +135,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
-
-
