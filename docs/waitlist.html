@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Web3Care — Waitlist</title>
+<style>
+ body{font:16px/1.6 system-ui;margin:0;background:#0b0f1a;color:#e7ecff}
+ .wrap{max-width:640px;margin:0 auto;padding:28px}
+ .card{background:#141a2e;border:1px solid #222946;border-radius:18px;padding:18px;margin:12px 0}
+ label{display:block;margin:8px 0 4px} input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #2a335a;background:#0e1426;color:#fff}
+ button{margin-top:12px;padding:12px 16px;border-radius:14px;border:1px solid #ffffff22;background:#7c4dff;color:#fff;cursor:pointer}
+ a{color:#c9d0ff}
+</style>
+</head>
+<body><div class="wrap">
+  <h1>Join the waitlist</h1>
+  <p class="muted">We’ll email only about early access and major updates. No spam.</p>
+
+  <div class="card">
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+      <label for="name">Name</label>
+      <input id="name" name="name" required />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+      <label for="role">I am a…</label>
+      <input id="role" name="role" placeholder="Caregiver, patient, clinician, other" />
+      <label for="notes">Anything we should know?</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+      <button type="submit">Join waitlist</button>
+    </form>
+    <p class="muted" style="margin-top:10px">No Formspree? Email us directly: <a href="mailto:founder@web3care.app?subject=Waitlist%20request">founder@web3care.app</a></p>
+  </div>
+
+  <p><a href="index.html">← Back</a></p>
+</div></body></html>
