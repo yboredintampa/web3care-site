@@ -7,32 +7,34 @@
   <link rel="icon" href="data:," />
   <style>
     :root{--bg:#0b1020;--card:#141a2e;--txt:#e7ecff;--muted:#a7b0d8;--brand:#7c4dff;--line:#222946}
-    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#0b1020,#0b0f1a);color:var(--txt);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
-    .wrap{max-width:980px;margin:0 auto;padding:28px}
-    .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:10px;flex-wrap:wrap}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#0b1020,#0b0f1a);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
     .logo{display:flex;gap:10px;align-items:center;font-weight:700}
     .dot{width:34px;height:34px;border-radius:12px;background:var(--brand);display:grid;place-items:center;box-shadow:0 8px 30px rgba(124,77,255,.35)}
-    .btn{display:inline-block;padding:12px 16px;border-radius:14px;border:1px solid #ffffff22;background:#ffffff10;color:#fff;text-decoration:none}
+    .btn{display:inline-block;padding:12px 16px;border-radius:14px;border:1px solid #ffffff22;background:#ffffff10;color:#fff;text-decoration:none;white-space:nowrap}
     .btn.primary{background:var(--brand);border-color:transparent}
-    .grid{display:grid;gap:14px}
-    @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
     .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
-    h1{font-size:clamp(28px,3.4vw,46px);line-height:1.1;margin:10px 0 6px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:980px){.grid{grid-template-columns:1.1fr .9fr}}
+    h1{font-size:clamp(28px,3.4vw,46px);line-height:1.1;margin:0 0 6px}
     h2{margin:0 0 10px;font-size:22px}
     .muted{color:var(--muted)}
-    ul{margin:8px 0 0 18px;padding:0}
-    li{margin:6px 0}
     .features{display:grid;gap:14px;margin-top:14px}
-    @media(min-width:900px){.features{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:980px){.features{grid-template-columns:repeat(3,1fr)}}
     .banner{border:1px solid #9c7dff55;background:#7c4dff15;color:#d9d0ff;border-radius:18px;padding:16px;margin:16px 0}
     footer{color:#9aa3c9;margin:26px 0}
-    code{background:#0003;padding:2px 6px;border-radius:6px}
-    a{color:#c9d0ff}
     .timeline{display:grid;gap:12px}
+    .hero{display:grid;gap:18px;align-items:center;margin:0 0 18px}
+    @media(min-width:980px){.hero{grid-template-columns:1.05fr .95fr}}
+    .hero img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);background:#0b1020}
+    a{color:#c9d0ff}
   </style>
 </head>
 <body>
   <div class="wrap">
+
+    <!-- Top nav -->
     <div class="nav">
       <div class="logo"><div class="dot">w</div> web3care.app</div>
       <div>
@@ -44,7 +46,8 @@
       </div>
     </div>
 
-    <div class="grid">
+    <!-- Hero -->
+    <section class="hero">
       <div>
         <h1>Privacy-first stroke-recovery companion for families and caregivers.</h1>
         <p class="muted">
@@ -56,6 +59,13 @@
         </p>
         <p class="muted" style="font-size:12px">.app domains are HTTPS-only (HSTS). No PHI is stored on servers.</p>
       </div>
+      <div>
+        <img src="assets/hero.png" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
+      </div>
+    </section>
+
+    <!-- Snapshot -->
+    <div class="grid">
       <div class="card">
         <h2>Grant-review snapshot</h2>
         <ul class="muted">
@@ -73,36 +83,27 @@
       <strong>Early access (waitlist):</strong> we’re building the MVP now. Join the list—first 100 users get a one-week free trial • $60/year thereafter.
     </div>
 
+    <!-- Features -->
     <h2 id="features">Features</h2>
     <div class="features">
       <div class="card"><strong>HIPAA-minded design</strong><br><span class="muted">Least-privilege, client-side encryption, auditability, vendor BAAs where applicable.</span></div>
       <div class="card"><strong>Care tracking that sticks</strong><br><span class="muted">BP, meds, therapy, meals, sleep, mood, notes, appointments—one simple flow.</span></div>
       <div class="card"><strong>Daily SMS summaries</strong><br><span class="muted">Plain-language check-ins (<em>no PHI in SMS</em>). Tap to view securely in the app.</span></div>
       <div class="card"><strong>Seedless sign-in</strong><br><span class="muted">Email 2FA + Passkeys (Face ID/Touch ID). No seed phrases.</span></div>
-      <div class="card"><strong>Solana at scale</strong><br><span class="muted">Low-fee receipts/roles via account abstraction &amp; session keys.</span></div>
+      <div class="card"><strong>Solana at scale</strong><br><span class="muted">Low-fee receipts/roles via account abstraction & session keys.</span></div>
       <div class="card"><strong>Versioned releases</strong><br><span class="muted">Frontend builds hosted on Storj for verifiable versions (optionally IPFS).</span></div>
     </div>
 
+    <!-- Timeline -->
     <h2 id="timeline" style="margin-top:20px">Release timeline</h2>
     <div class="timeline">
-      <div class="card">
-        <strong>Oct–Nov 2025</strong><br>
-        <span class="muted">MVP build: vitals + meds + meals + notes; email 2FA + passkeys; local E2E encryption; waitlist.</span>
-      </div>
-      <div class="card">
-        <strong>Dec 2025</strong><br>
-        <span class="muted">Private pilot (10–20 families); accessibility polish; daily non-PHI SMS summaries.</span>
-      </div>
-      <div class="card">
-        <strong>Jan–Feb 2026</strong><br>
-        <span class="muted">Account abstraction (roles + session keys), device revocation; encrypted backups (second device / USB / home box).</span>
-      </div>
-      <div class="card">
-        <strong>Mar 2026</strong><br>
-        <span class="muted">Public beta + subscriptions ($60/yr) via Stripe/Solana Pay; Storj release mirrors; early caregiver partnerships.</span>
-      </div>
+      <div class="card"><strong>Oct–Nov 2025</strong><br><span class="muted">MVP build: vitals + meds + meals + notes; email 2FA + passkeys; local E2E encryption; waitlist.</span></div>
+      <div class="card"><strong>Dec 2025</strong><br><span class="muted">Private pilot (10–20 families); accessibility polish; daily non-PHI SMS summaries.</span></div>
+      <div class="card"><strong>Jan–Feb 2026</strong><br><span class="muted">Account abstraction (roles + session keys), device revocation; encrypted backups (second device / USB / home box).</span></div>
+      <div class="card"><strong>Mar 2026</strong><br><span class="muted">Public beta + subscriptions ($60/yr) via Stripe/Solana Pay; Storj release mirrors; early caregiver partnerships.</span></div>
     </div>
 
+    <!-- Mirrors -->
     <h2 id="mirrors" style="margin-top:20px">Release mirrors</h2>
     <div class="card">
       <div class="muted">We’ll publish each tagged release to object/decentralized storage for transparency.</div>
@@ -114,6 +115,7 @@
       <div class="muted" style="font-size:12px">Tip: keep a <code>RELEASE_SHA256.txt</code> alongside each release.</div>
     </div>
 
+    <!-- Contact -->
     <h2 id="contact" style="margin-top:20px">Get in touch</h2>
     <div class="card">
       <p class="muted">Investors, design partners, and grant reviewers welcome.</p>
@@ -129,4 +131,5 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
+
 
