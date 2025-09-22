@@ -45,7 +45,7 @@
       <div>
         <h1>Privacy-first stroke-recovery companion for families and caregivers.</h1>
         <p class="muted">
-          Inspired by my mother’s stroke recovery. <strong>Web3Care is in development (pre-MVP)</strong>—a PWA to help families track vitals, meds, meals, therapy, mood &amp; appointments, with a daily <em>non-PHI</em> SMS summary. Solana-first (~$0.91/user/year). Public releases will be mirrored to Storj (and optionally IPFS).
+          Built to help families facing similar challenges. <strong>Web3Care is in development (pre-MVP)</strong>—a PWA to track vitals, meds, meals, therapy, mood &amp; appointments, with a daily <em>non-PHI</em> SMS summary. Solana-first (~$0.91/user/year). Public releases will be mirrored to Storj (and optionally IPFS).
         </p>
         <p>
           <a class="btn primary" href="mailto:founder@web3care.app?subject=Join%20the%20Web3Care%20waitlist">Join the waitlist</a>
@@ -56,4 +56,54 @@
       <div class="card">
         <h2>Grant-review snapshot</h2>
         <ul class="muted">
-          <li>In
+          <li>Purpose: help families manage stroke-recovery routines</li>
+          <li>Status: <strong>pre-MVP, in development</strong> (no production app yet)</li>
+          <li>Target: 7M survivors, 53M caregivers (US); global next</li>
+          <li>Infra plan: Solana AA + session keys • Email 2FA + Passkeys • Storj releases • non-PHI SMS</li>
+          <li>Pricing plan: $60/year; one-week free trial for first 100 users</li>
+          <li>Milestones: MVP pilot (10–20 families) → ARR $1M by 2026</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="banner">
+      <strong>Early access (waitlist):</strong> we’re building the MVP now. Join the list—first 100 users get a one-week free trial • $60/year thereafter.
+    </div>
+
+    <h2 id="features">Features</h2>
+    <div class="features">
+      <div class="card"><strong>HIPAA-minded design</strong><br><span class="muted">Least-privilege, client-side encryption, auditability, vendor BAAs where applicable.</span></div>
+      <div class="card"><strong>Care tracking that sticks</strong><br><span class="muted">BP, meds, therapy, meals, sleep, mood, notes, appointments—one simple flow.</span></div>
+      <div class="card"><strong>Daily SMS summaries</strong><br><span class="muted">Plain-language check-ins (<em>no PHI in SMS</em>). Tap to view securely in the app.</span></div>
+      <div class="card"><strong>Seedless sign-in</strong><br><span class="muted">Email 2FA + Passkeys (Face ID/Touch ID). No seed phrases.</span></div>
+      <div class="card"><strong>Solana at scale</strong><br><span class="muted">Low-fee receipts/roles via account abstraction &amp; session keys.</span></div>
+      <div class="card"><strong>Versioned releases</strong><br><span class="muted">Frontend builds hosted on Storj for verifiable versions (optionally IPFS).</span></div>
+    </div>
+
+    <h2 id="mirrors" style="margin-top:20px">Release mirrors</h2>
+    <div class="card">
+      <div class="muted">We’ll publish each tagged release to object/decentralized storage for transparency.</div>
+      <ul class="muted">
+        <li>Storj: <em>Release v0.1.0 — URL pending</em></li>
+        <li>SHA-256: <em>pending</em></li>
+        <li>IPFS (optional): <em>CID pending</em></li>
+      </ul>
+      <div class="muted" style="font-size:12px">Tip: keep a <code>RELEASE_SHA256.txt</code> alongside each release.</div>
+    </div>
+
+    <h2 id="contact" style="margin-top:20px">Get in touch</h2>
+    <div class="card">
+      <p class="muted">Investors, design partners, and grant reviewers welcome.</p>
+      <p>
+        <a class="btn primary" href="mailto:founder@web3care.app?subject=Join%20the%20Web3Care%20waitlist">Join the waitlist</a>
+        <a class="btn" href="#">Open concept deck</a>
+        <a class="btn" href="privacy.html">Privacy</a>
+      </p>
+    </div>
+
+    <footer>© <span id="y"></span> Web3Care — Built with Solana ✦ Storj ✦ IPFS</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+
