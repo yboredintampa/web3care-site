@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Web3Care – Privacy-first stroke recovery companion (pre-MVP)</title>
   <link rel="icon" href="data:," />
-  <meta name="description" content="Web3Care (pre-MVP) is a privacy-first PWA to help families navigating stroke recovery track care, bills, and cognitive activities, with daily non-PHI SMS signals (BP status only, bills due, appointments, participation in cognitive games)." />
+  <meta name="description" content="Web3Care (pre-MVP) is a privacy-first PWA to help families navigating stroke recovery track care, bills, and cognitive activities, with daily non-PHI SMS signals." />
   <style>
     :root{--bg:#0b1020;--card:#141a2e;--txt:#e7ecff;--muted:#a7b0d8;--brand:#7c4dff;--line:#222946}
     *{box-sizing:border-box}
@@ -44,6 +44,7 @@
       <div class="logo"><div class="dot">w</div> web3care.app</div>
       <div>
         <a class="btn" href="#features">Features</a>
+        <a class="btn" href="#payments">Payments</a>
         <a class="btn" href="#timeline">Timeline</a>
         <a class="btn" href="deck.html">Deck</a>
         <a class="btn" href="waitlist.html">Waitlist</a>
@@ -126,44 +127,24 @@
       </div>
     </div>
 
-    <!-- Timeline -->
-    <h2 id="timeline" style="margin-top:20px">Release timeline</h2>
-    <div class="timeline">
-      <div class="card"><strong>Oct–Nov 2025</strong><br><span class="muted">MVP build: vitals + meds + meals + notes; email 2FA + passkeys; local E2E encryption; waitlist.</span></div>
-      <div class="card"><strong>Dec 2025</strong><br><span class="muted">Private pilot (10–20 families); accessibility polish; daily non-PHI SMS summaries.</span></div>
-      <div class="card"><strong>Jan–Feb 2026</strong><br><span class="muted">Account abstraction (roles + session keys), device revocation; encrypted backups (second device / USB / home box).</span></div>
-      <div class="card"><strong>Mar 2026</strong><br><span class="muted">Public beta + subscriptions ($60/yr) via Stripe/Solana Pay; Storj release mirrors; early caregiver partnerships.</span></div>
-    </div>
-
-    <!-- Mirrors (fill once you upload) -->
-    <h2 id="mirrors" style="margin-top:20px">Release mirrors</h2>
+    <!-- Payments -->
+    <h2 id="payments" style="margin-top:20px">Pricing & Payments</h2>
     <div class="card">
-      <div class="muted">We publish tagged releases and public artifacts to decentralized/object storage for transparency.</div>
       <ul class="muted">
-        <li><strong>Concept deck (PDF):</strong>
-          <a href="STORJ_DECK_URL">Storj</a> •
-          <a href="https://ipfs.io/ipfs/IPFS_CID/web3care-deck/deck.pdf">IPFS (ipfs.io)</a> •
-          <a href="https://cloudflare-ipfs.com/ipfs/IPFS_CID/web3care-deck/deck.pdf">IPFS (Cloudflare)</a>
-          <br/>SHA-256: <code>SHA256_HEX</code>
+        <li><strong>Plans:</strong> $9.99/month or $59/year (founding offer may apply).</li>
+        <li><strong>Two ways to pay:</strong> 
+          <em>Solana Pay</em> (USDC from Phantom/Solflare, for crypto-native users) or 
+          <em>MoonPay</em> (card → USDC on Solana, no wallet knowledge required).
         </li>
-        <li><strong>Release v0.1.0 (site build):</strong> Storj URL pending • SHA-256 pending • IPFS CID pending</li>
+        <li><strong>Renewals:</strong> Non-PHI SMS reminders with fresh links; one tap to complete.</li>
+        <li><strong>Privacy:</strong> No PHI in payment notes; subscriptions are verified by on-chain receipt only.</li>
       </ul>
-      <div class="muted" style="font-size:12px">Tip: publish <code>RELEASE_SHA256.txt</code> and keep a CHANGELOG per tag.</div>
-    </div>
-
-    <!-- Contact -->
-    <h2 id="contact" style="margin-top:20px">Get in touch</h2>
-    <div class="card">
-      <p class="muted">Investors, design partners, and grant reviewers welcome.</p>
-      <p>
-        <a class="btn primary" href="waitlist.html">Join the waitlist</a>
-        <a class="btn" href="deck.html">Open concept deck</a>
-        <a class="btn" href="privacy.html">Privacy</a>
-      </p>
-    </div>
-
-    <footer>© <span id="y"></span> Web3Care — Built with Solana ✦ Storj ✦ IPFS</footer>
-  </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-</body>
-</html>
+      <p style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+        <!-- SOLANA PAY: deep link (USDC). Replace placeholders. -->
+        <a class="btn primary" href="solana:SOLANA_PAY_RECIPIENT?amount=59&spl-token=USDC_MINT&label=Web3Care%20Annual&message=Annual%20subscription" title="Pay USDC from your wallet">
+          Pay with Solana Pay — Annual ($59)
+        </a>
+        <!-- Example monthly link; duplicate as needed -->
+        <a class="btn" href="solana:SOLANA_PAY_RECIPIENT?amount=9.99&spl-token=USDC_MINT&label=Web3Care%20Monthly&message=Monthly%20subscription" title="Pay USDC from your wallet">
+          Solana Pay — Monthly ($9.99)
+        </a>
