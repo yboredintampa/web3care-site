@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Web3Care – Privacy-first stroke recovery companion (pre-MVP)</title>
   <link rel="icon" href="data:," />
-  <meta name="description" content="Web3Care (pre-MVP) is a privacy-first PWA to help families navigating stroke recovery track care, bills, and cognitive activities with a daily non-PHI SMS summary." />
+  <meta name="description" content="Web3Care (pre-MVP) is a privacy-first PWA to help families navigating stroke recovery track care, bills, and cognitive activities, with daily non-PHI SMS signals (BP status only, bills due, appointments, participation in cognitive games)." />
   <style>
     :root{--bg:#0b1020;--card:#141a2e;--txt:#e7ecff;--muted:#a7b0d8;--brand:#7c4dff;--line:#222946}
     *{box-sizing:border-box}
@@ -56,7 +56,7 @@
       <div>
         <h1>Privacy-first stroke-recovery companion for families and caregivers.</h1>
         <p class="muted">
-          Inspired to help families navigating stroke recovery, <strong>Web3Care (pre-MVP)</strong> is a PWA vision for tracking vitals, meds, meals, therapy, mood, appointments, <strong>bill payment reminders</strong>, and <strong>cognitive-strengthening activities (games)</strong>—plus a daily <em>non-PHI</em> SMS summary. Solana-first (~$0.91/user/year). Releases will be mirrored to Storj (optional IPFS).
+          Inspired to help families navigating stroke recovery, <strong>Web3Care (pre-MVP)</strong> is a PWA vision for tracking vitals, meds, meals, therapy, mood, appointments, <strong>bill payment reminders</strong>, and <strong>cognitive-strengthening activities (games)</strong>—with a daily <em>non-PHI</em> SMS summary. SMS conveys <em>signals only</em>: BP status (<strong>High / Low / In-range</strong>—never numbers), bills due, upcoming appointments, and participation in cognitive games. Solana-first (~$0.91/user/year). Releases will be mirrored to Storj (optional IPFS).
         </p>
         <p>
           <a class="btn primary" href="waitlist.html">Join the waitlist</a>
@@ -65,7 +65,7 @@
         <p class="muted" style="font-size:12px">.app domains are HTTPS-only (HSTS). No PHI is stored on servers.</p>
       </div>
       <div>
-        <img src="assets/hero.png?v=3" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
+        <img src="assets/hero.png?v=4" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
       </div>
     </section>
 
@@ -99,13 +99,15 @@
       <div class="card">
         <strong>Care tracking that sticks</strong><br>
         <span class="muted">
-          BP, meds, therapy, meals, sleep, mood, notes, appointments, <em>bill payment reminders</em>, and <em>cognitive games</em> built in.
+          BP, meds, therapy, meals, sleep, mood, notes, appointments—plus <em>bill payment reminders</em> and <em>cognitive games</em> built in.
         </span>
       </div>
 
       <div class="card">
         <strong>Daily summaries (non-PHI)</strong><br>
-        <span class="muted">Plain-language check-ins via SMS; tap to view securely in the app. (No PHI in SMS.)</span>
+        <span class="muted">
+          SMS conveys <em>signals only</em>: BP status (<strong>High / Low / In-range</strong>—no numeric vitals), bills due, upcoming appointments, and participation in cognitive games. Tap to view details securely in the app.
+        </span>
       </div>
 
       <div class="card">
@@ -133,7 +135,7 @@
       <div class="card"><strong>Mar 2026</strong><br><span class="muted">Public beta + subscriptions ($60/yr) via Stripe/Solana Pay; Storj release mirrors; early caregiver partnerships.</span></div>
     </div>
 
-    <!-- Mirrors (we'll fill these once you upload) -->
+    <!-- Mirrors (fill once you upload) -->
     <h2 id="mirrors" style="margin-top:20px">Release mirrors</h2>
     <div class="card">
       <div class="muted">We publish tagged releases and public artifacts to decentralized/object storage for transparency.</div>
