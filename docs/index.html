@@ -78,7 +78,7 @@
           <li>Purpose: help families manage stroke-recovery routines</li>
           <li>Status: <strong>in development (no production app yet)</strong></li>
           <li>Target: 7M survivors, 53M caregivers (US); global next</li>
-          <li>Infra plan: Solana AA + session keys • Email 2FA + Passkeys • Storj/IPFS release mirrors • non-PHI SMS</li>
+          <li>Infra plan: Solana AA + session keys • Email 2FA + Passkeys • Storj/IPFS release mirrors • non-PHI SMS <em>(no vendor PHI, no BAAs)</em></li>
           <li>Pricing plan: $60/year; one-week free trial for first 100 users</li>
           <li>Milestones: MVP pilot (10–20 families) → ARR $1M by 2026</li>
         </ul>
@@ -93,8 +93,10 @@
     <h2 id="features">Features</h2>
     <div class="features">
       <div class="card">
-        <strong>HIPAA-minded design</strong><br>
-        <span class="muted">Least-privilege, client-side encryption, auditability, vendor BAAs where applicable.</span>
+        <strong>HIPAA-minded design (no vendor PHI, no BAAs)</strong><br>
+        <span class="muted">
+          We do not receive, process, or store PHI. PHI stays on user devices with client-side encryption. Because no vendors handle PHI, BAAs are not applicable.
+        </span>
       </div>
 
       <div class="card">
