@@ -13,12 +13,13 @@
  code{background:#0003;padding:2px 6px;border-radius:6px}
 </style>
 </head>
-<body><div class="wrap">
+<body>
+<div class="wrap">
   <h1>Privacy</h1>
-  <p class="muted">Effective: September 21, 2025</p>
+  <p class="muted">Effective: September 2025</p>
 
   <div class="card"><h2>Our stance</h2>
-    <p><strong>We do not store personal health information (PHI) on our servers.</strong> PHI remains on your devices, encrypted end-to-end. We design for HIPAA-minded controls, but until we complete formal reviews and vendor BAAs, we do not claim HIPAA certification.</p>
+    <p><strong>We do not store personal health information (PHI) on our servers.</strong> PHI remains on your devices, encrypted end-to-end. We design for HIPAA-minded controls, but we do not claim HIPAA certification. Because we do not receive, maintain, or transmit PHI for covered entities, <strong>Web3Care does not act as a HIPAA Business Associate and no BAA is required</strong>.</p>
   </div>
 
   <div class="card"><h2>What we store (and where)</h2>
@@ -31,7 +32,18 @@
   </div>
 
   <div class="card"><h2>Messaging & notifications</h2>
-    <p>Daily SMS/email contain <strong>no PHI</strong>. They link back to the app, which decrypts locally on your device.</p>
+    <p class="muted">
+      Our SMS/email notifications are deliberately <strong>PHI-free</strong>. They communicate <em>signals only</em>:
+    </p>
+    <ul class="muted">
+      <li><strong>Blood pressure status:</strong> <em>High / Low / In-range</em> — <strong>never numeric readings</strong> (no 118/76, etc.).</li>
+      <li><strong>Bills due</strong> (reminders only; no account numbers or sensitive details).</li>
+      <li><strong>Upcoming appointments</strong> (reminders without clinical detail).</li>
+      <li><strong>Participation in cognitive games</strong> (activity status only; no scores or PHI).</li>
+    </ul>
+    <p class="muted">
+      To view details, the user opens the app and data is decrypted locally on their device.
+    </p>
   </div>
 
   <div class="card"><h2>Security</h2>
@@ -51,15 +63,15 @@
   </div>
 
   <div class="card"><h2>Analytics</h2>
-    <p>Disabled by default. If enabled later, we’ll use minimal, privacy-respecting metrics and avoid collecting PHI.</p>
+    <p class="muted">Disabled by default. If enabled later, we’ll use minimal, privacy-respecting metrics and avoid collecting PHI.</p>
   </div>
 
   <div class="card"><h2>Children’s privacy</h2>
-    <p>Web3Care is intended for adults and families managing care. If you believe a child’s data was submitted in error, contact us for assistance.</p>
+    <p class="muted">Web3Care is intended for adults and families managing care. If you believe a child’s data was submitted in error, contact us for assistance.</p>
   </div>
 
   <div class="card"><h2>Incident response</h2>
-    <p>If we ever discover a security issue affecting non-PHI data we handle (e.g., waitlist emails), we will notify affected users and take corrective actions. PHI is stored only on user devices and user-controlled backups.</p>
+    <p class="muted">If we ever discover a security issue affecting non-PHI data we handle (e.g., waitlist emails), we will notify affected users and take corrective actions. PHI is stored only on user devices and user-controlled backups.</p>
   </div>
 
   <div class="card"><h2>Contact</h2>
@@ -67,4 +79,7 @@
   </div>
 
   <p><a href="index.html">← Back</a></p>
-</div></body></html>
+</div>
+</body>
+</html>
+
