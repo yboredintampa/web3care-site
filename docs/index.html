@@ -33,6 +33,7 @@
     a{color:#c9d0ff}
     ul{margin:8px 0 0 18px;padding:0}
     li{margin:6px 0}
+    .tag{display:inline-block;font-size:12px;padding:4px 8px;border:1px solid #2b3562;border-radius:999px;background:#111834;color:#aeb8ee;margin-left:8px}
   </style>
 </head>
 <body>
@@ -55,7 +56,7 @@
       <div>
         <h1>Privacy-first stroke-recovery companion for families and caregivers.</h1>
         <p class="muted">
-          Inspired to help families navigating stroke recovery, <strong>Web3Care (pre-MVP)</strong> is a PWA for tracking vitals, meds, meals, therapy, mood, appointments, <strong>bill payments</strong>, and <strong>cognitive-strengthening activities (games)</strong>—plus a daily <em>non-PHI</em> SMS summary. Solana-first (~$0.91/user/year). Releases mirrored to Storj (optional IPFS).
+          Inspired to help families navigating stroke recovery, <strong>Web3Care (pre-MVP)</strong> is a PWA vision for tracking vitals, meds, meals, therapy, mood, appointments, <strong>bill payment reminders</strong>, and <strong>cognitive-strengthening activities (games)</strong>—plus a daily <em>non-PHI</em> SMS summary. Solana-first (~$0.91/user/year). Releases will be mirrored to Storj (optional IPFS).
         </p>
         <p>
           <a class="btn primary" href="waitlist.html">Join the waitlist</a>
@@ -64,19 +65,19 @@
         <p class="muted" style="font-size:12px">.app domains are HTTPS-only (HSTS). No PHI is stored on servers.</p>
       </div>
       <div>
-        <img src="assets/hero.png?v=2" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
+        <img src="assets/hero.png?v=3" alt="Caregiver helping an older adult use a simple, private health tracker on a phone." />
       </div>
     </section>
 
     <!-- Snapshot -->
     <div class="grid">
       <div class="card">
-        <h2>Grant-review snapshot</h2>
+        <h2>Grant-review snapshot <span class="tag">pre-MVP</span></h2>
         <ul class="muted">
           <li>Purpose: help families manage stroke-recovery routines</li>
-          <li>Status: <strong>pre-MVP, in development</strong> (no production app yet)</li>
+          <li>Status: <strong>in development (no production app yet)</strong></li>
           <li>Target: 7M survivors, 53M caregivers (US); global next</li>
-          <li>Infra plan: Solana AA + session keys • Email 2FA + Passkeys • Storj releases • non-PHI SMS</li>
+          <li>Infra plan: Solana AA + session keys • Email 2FA + Passkeys • Storj/IPFS release mirrors • non-PHI SMS</li>
           <li>Pricing plan: $60/year; one-week free trial for first 100 users</li>
           <li>Milestones: MVP pilot (10–20 families) → ARR $1M by 2026</li>
         </ul>
@@ -87,15 +88,40 @@
       <strong>Early access (waitlist):</strong> we’re building the MVP now. Join the list—first 100 users get a one-week free trial • $60/year thereafter.
     </div>
 
-    <!-- Features -->
+    <!-- Features (Design principles & planned capabilities) -->
     <h2 id="features">Features</h2>
     <div class="features">
-      <div class="card"><strong>HIPAA-minded design</strong><br><span class="muted">Least-privilege, client-side encryption, auditability, vendor BAAs where applicable.</span></div>
-      <div class="card"><strong>Care tracking that sticks</strong><br><span class="muted">BP, meds, therapy, meals, sleep, mood, notes, appointments—now with <em>bill payments</em> and <em>cognitive games</em> built in.</span></div>
-      <div class="card"><strong>Daily SMS summaries</strong><br><span class="muted">Plain-language check-ins (<em>no PHI in SMS</em>). Tap to view securely in the app.</span></div>
-      <div class="card"><strong>Seedless sign-in</strong><br><span class="muted">Email 2FA + Passkeys (Face ID/Touch ID). No seed phrases.</span></div>
-      <div class="card"><strong>Solana at scale</strong><br><span class="muted">Low-fee receipts/roles via account abstraction & session keys.</span></div>
-      <div class="card"><strong>Versioned releases</strong><br><span class="muted">Frontend builds hosted on Storj for verifiable versions (optionally IPFS).</span></div>
+      <div class="card">
+        <strong>HIPAA-minded design</strong><br>
+        <span class="muted">Least-privilege, client-side encryption, auditability, vendor BAAs where applicable.</span>
+      </div>
+
+      <div class="card">
+        <strong>Care tracking that sticks</strong><br>
+        <span class="muted">
+          BP, meds, therapy, meals, sleep, mood, notes, appointments, <em>bill payment reminders</em>, and <em>cognitive games</em> built in.
+        </span>
+      </div>
+
+      <div class="card">
+        <strong>Daily summaries (non-PHI)</strong><br>
+        <span class="muted">Plain-language check-ins via SMS; tap to view securely in the app. (No PHI in SMS.)</span>
+      </div>
+
+      <div class="card">
+        <strong>Seedless sign-in</strong><br>
+        <span class="muted">Email 2FA + Passkeys (Face ID/Touch ID). No seed phrases. Account abstraction for roles & session keys.</span>
+      </div>
+
+      <div class="card">
+        <strong>Privacy by architecture</strong><br>
+        <span class="muted">PHI stays on user devices (client-side encrypted). On-chain: roles/receipts only—never PHI.</span>
+      </div>
+
+      <div class="card">
+        <strong>Verifiable releases</strong><br>
+        <span class="muted">Frontend builds mirrored to Storj with optional IPFS, plus published SHA-256 checksums.</span>
+      </div>
     </div>
 
     <!-- Timeline -->
@@ -107,16 +133,20 @@
       <div class="card"><strong>Mar 2026</strong><br><span class="muted">Public beta + subscriptions ($60/yr) via Stripe/Solana Pay; Storj release mirrors; early caregiver partnerships.</span></div>
     </div>
 
-    <!-- Mirrors -->
+    <!-- Mirrors (we'll fill these once you upload) -->
     <h2 id="mirrors" style="margin-top:20px">Release mirrors</h2>
     <div class="card">
-      <div class="muted">We’ll publish each tagged release to object/decentralized storage for transparency.</div>
+      <div class="muted">We publish tagged releases and public artifacts to decentralized/object storage for transparency.</div>
       <ul class="muted">
-        <li>Storj: <em>Release v0.1.0 — URL pending</em></li>
-        <li>SHA-256: <em>pending</em></li>
-        <li>IPFS (optional): <em>CID pending</em></li>
+        <li><strong>Concept deck (PDF):</strong>
+          <a href="STORJ_DECK_URL">Storj</a> •
+          <a href="https://ipfs.io/ipfs/IPFS_CID/web3care-deck/deck.pdf">IPFS (ipfs.io)</a> •
+          <a href="https://cloudflare-ipfs.com/ipfs/IPFS_CID/web3care-deck/deck.pdf">IPFS (Cloudflare)</a>
+          <br/>SHA-256: <code>SHA256_HEX</code>
+        </li>
+        <li><strong>Release v0.1.0 (site build):</strong> Storj URL pending • SHA-256 pending • IPFS CID pending</li>
       </ul>
-      <div class="muted" style="font-size:12px">Tip: keep a <code>RELEASE_SHA256.txt</code> alongside each release.</div>
+      <div class="muted" style="font-size:12px">Tip: publish <code>RELEASE_SHA256.txt</code> and keep a CHANGELOG per tag.</div>
     </div>
 
     <!-- Contact -->
@@ -135,4 +165,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
-
