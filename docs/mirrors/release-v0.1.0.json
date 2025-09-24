@@ -1,0 +1,14 @@
+{
+  "name": "Web3Care Concept Deck",
+  "filename": "web3care-deck.pdf",
+  "version": "v0.1.0",
+  "sha256": "C8116B44261A8C43C2529B97D93916716C9EB127B825DF8929011440A36083F7",
+  "storj_url": "https://link.storjshare.io/s/jvllukmbqq75xrzk57yyyoqnrleq/web3care-deck/web3care-deck.pdf",
+  "ipfs_cid": "bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4",
+  "ipfs_gateways": [
+    "https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4",
+    "https://cloudflare-ipfs.com/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4"
+  ],
+  "published_at": "2025-09-23"
+}
+
