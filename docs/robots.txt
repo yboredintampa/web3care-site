@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Optional: add this later if you publish one
+# Sitemap: https://web3care.app/sitemap.xml
