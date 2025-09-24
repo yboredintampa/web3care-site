@@ -1,68 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Web3Care – Concept Deck</title>
-<style>
- body{font:16px/1.6 system-ui;margin:0;background:#0b0f1a;color:#e7ecff}
- .wrap{max-width:940px;margin:0 auto;padding:28px}
- h1{margin:0 0 8px} h2{margin:22px 0 8px}
- .card{background:#141a2e;border:1px solid #222946;border-radius:18px;padding:18px;margin:12px 0}
- .muted{color:#a7b0d8} a{color:#c9d0ff}
- ul{margin-left:18px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web3Care — Concept Deck (PDF)</title>
+  <meta name="description" content="Web3Care concept deck: vision, roadmap, privacy model, and go-to-market." />
+  <style>
+    :root{--bg:#0b0f1a;--card:#141a2e;--txt:#e7ecff;--muted:#a7b0d8;--line:#222946;--brand:#7c4dff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}
+    .row{display:grid;gap:16px}
+    @media(min-width:980px){ .row{grid-template-columns:2fr 1fr} }
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid #ffffff22;background:#ffffff10;color:#fff;text-decoration:none}
+    .btn.primary{background:var(--brand);border-color:transparent}
+    .muted{color:var(--muted)}
+    .pdf{width:100%;height:min(85vh,900px);border:1px solid var(--line);border-radius:14px;background:#0b1020}
+    a{color:#c9d0ff}
+    ul{margin:8px 0 0 18px}
+    code{background:#0003;padding:2px 6px;border-radius:6px}
+    pre{background:#0b1020;border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--muted)}
+  </style>
 </head>
-<body><div class="wrap">
-  <h1>Web3Care — Concept Deck</h1>
-  <p class="muted">Inspired to help families navigating stroke recovery. Pre-MVP.</p>
+<body>
+  <div class="wrap">
+    <h1 style="margin:0 0 10px">Web3Care — Concept Deck (PDF)</h1>
+    <p class="muted">If the inline viewer doesn’t load, use the mirror links on the right.</p>
 
-  <div class="card"><h2>01 — Problem</h2>
-    <p>Care is fragmented across vitals, meds, meals, therapy, and appointments. Families need simple routines and shared visibility without sacrificing privacy.</p>
+    <div class="row">
+      <!-- PDF embed (IPFS primary) -->
+      <div class="card">
+        <object class="pdf" data="https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4" type="application/pdf">
+          <iframe class="pdf" src="https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4"></iframe>
+        </object>
+      </div>
+
+      <!-- Mirrors & verification -->
+      <div class="card">
+        <h2 style="margin:0 0 10px">Mirrors & verification</h2>
+        <ul class="muted">
+          <li><strong>Storj (primary):</strong> <a href="STORJ_DECK_URL" class="btn primary">Open on Storj</a></li>
+          <li><strong>IPFS (ipfs.io):</strong>
+            <a href="https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4" target="_blank" rel="noopener">Open on ipfs.io</a>
+          </li>
+          <li><strong>IPFS (Cloudflare):</strong>
+            <a href="https://cloudflare-ipfs.com/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4" target="_blank" rel="noopener">Open on Cloudflare IPFS</a>
+          </li>
+          <li><strong>Filename:</strong> <code>deck.pdf</code></li>
+          <li><strong>SHA-256:</strong> <code>SHA256_HEX</code></li>
+          <li><strong>Version:</strong> <code>v0.1.0</code> • <a href="index.html#mirrors">release mirrors</a></li>
+        </ul>
+
+        <h3 style="margin:18px 0 6px">Verify locally</h3>
+        <pre>
+# macOS / Linux
+shasum -a 256 deck.pdf
+
+# Windows PowerShell
+Get-FileHash deck.pdf -Algorithm SHA256
+
+# Output must equal:
+SHA256_HEX
+        </pre>
+      </div>
+    </div>
+
+    <p style="margin:12px 0"><a class="btn" href="index.html">← Back to site</a></p>
   </div>
+</body>
+</html>
 
-  <div class="card"><h2>02 — Solution</h2>
-    <p>Privacy-first PWA to track daily care, with a single-screen dashboard and a daily <em>non-PHI</em> SMS summary. Seedless sign-in (email 2FA + passkeys).</p>
-  </div>
-
-  <div class="card"><h2>03 — Product</h2>
-    <ul class="muted">
-      <li>Big-button flows: BP, Meds, Meals, Notes, Appointments</li>
-      <li>Local E2E encryption; PHI stays on devices</li>
-      <li>Account abstraction for roles & session keys (on Solana)</li>
-      <li>Releases mirrored on Storj; optional IPFS</li>
-    </ul>
-  </div>
-
-  <div class="card"><h2>04 — Privacy & Security</h2>
-    <ul class="muted">
-      <li>No server-side PHI; client-side encryption by default</li>
-      <li>Non-PHI SMS only; view details in the app</li>
-      <li>Device revocation; optional second-device/USB/home-box backups</li>
-    </ul>
-  </div>
-
-  <div class="card"><h2>05 — Market & GTM</h2>
-    <ul class="muted">
-      <li>US: 7M stroke survivors; 53M caregivers</li>
-      <li>Channels: stroke orgs, Facebook groups, AARP, caregiver communities</li>
-      <li>Pricing: $60/year; one-week free trial (first 100 users)</li>
-    </ul>
-  </div>
-
-  <div class="card"><h2>06 — Roadmap</h2>
-    <p class="muted">See <a href="index.html#timeline">Release timeline</a> for dates.</p>
-  </div>
-
-  <div class="card"><h2>07 — Open Source</h2>
-    <p>Open modules (release mirroring, AA session-keys starter) with clear docs; core care engine remains proprietary.</p>
-  </div>
-
-  <div class="card"><h2>08 — Ask</h2>
-    <ul class="muted">
-      <li>Pilot partners (10–20 families)</li>
-      <li>Grant support & feedback on accessibility</li>
-    </ul>
-  </div>
-
-  <p><a href="index.html">← Back</a></p>
-</div></body></html>
