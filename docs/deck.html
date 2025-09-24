@@ -10,12 +10,12 @@
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
     .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}
+    .card{background:#141a2e;border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}
     .row{display:grid;gap:16px}
     @media(min-width:980px){ .row{grid-template-columns:2fr 1fr} }
     .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid #ffffff22;background:#ffffff10;color:#fff;text-decoration:none}
     .btn.primary{background:var(--brand);border-color:transparent}
-    .muted{color:var(--muted)}
+    .muted{color:#a7b0d8}
     .pdf{width:100%;height:min(85vh,900px);border:1px solid var(--line);border-radius:14px;background:#0b1020}
     a{color:#c9d0ff}
     ul{margin:8px 0 0 18px}
@@ -29,10 +29,10 @@
     <p class="muted">If the inline viewer doesn’t load, use the mirror links on the right.</p>
 
     <div class="row">
-      <!-- PDF embed (IPFS primary) -->
+      <!-- PDF embed (Storj primary) -->
       <div class="card">
-        <object class="pdf" data="https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4" type="application/pdf">
-          <iframe class="pdf" src="https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4"></iframe>
+        <object class="pdf" data="https://link.storjshare.io/s/jvllukmbqq75xrzk57yyyoqnrleq/web3care-deck/web3care-deck.pdf" type="application/pdf">
+          <iframe class="pdf" src="https://link.storjshare.io/s/jvllukmbqq75xrzk57yyyoqnrleq/web3care-deck/web3care-deck.pdf"></iframe>
         </object>
       </div>
 
@@ -40,28 +40,30 @@
       <div class="card">
         <h2 style="margin:0 0 10px">Mirrors & verification</h2>
         <ul class="muted">
-          <li><strong>Storj (primary):</strong> <a href="STORJ_DECK_URL" class="btn primary">Open on Storj</a></li>
+          <li><strong>Storj (primary):</strong>
+            <a href="https://link.storjshare.io/s/jvllukmbqq75xrzk57yyyoqnrleq/web3care-deck/web3care-deck.pdf" class="btn primary">Open on Storj</a>
+          </li>
           <li><strong>IPFS (ipfs.io):</strong>
             <a href="https://ipfs.io/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4" target="_blank" rel="noopener">Open on ipfs.io</a>
           </li>
           <li><strong>IPFS (Cloudflare):</strong>
             <a href="https://cloudflare-ipfs.com/ipfs/bafkreic5tggaxtsirfwqf7ontjwtbu4ua6owrfaimqh2jsxzgpdtawz3n4" target="_blank" rel="noopener">Open on Cloudflare IPFS</a>
           </li>
-          <li><strong>Filename:</strong> <code>deck.pdf</code></li>
-          <li><strong>SHA-256:</strong> <code>SHA256_HEX</code></li>
+          <li><strong>Filename:</strong> <code>web3care-deck.pdf</code></li>
+          <li><strong>SHA-256:</strong> <code>C8116B44261A8C43C2529B97D93916716C9EB127B825DF8929011440A36083F7</code></li>
           <li><strong>Version:</strong> <code>v0.1.0</code> • <a href="index.html#mirrors">release mirrors</a></li>
         </ul>
 
         <h3 style="margin:18px 0 6px">Verify locally</h3>
         <pre>
 # macOS / Linux
-shasum -a 256 deck.pdf
+shasum -a 256 web3care-deck.pdf
 
 # Windows PowerShell
-Get-FileHash deck.pdf -Algorithm SHA256
+Get-FileHash web3care-deck.pdf -Algorithm SHA256
 
 # Output must equal:
-SHA256_HEX
+C8116B44261A8C43C2529B97D93916716C9EB127B825DF8929011440A36083F7
         </pre>
       </div>
     </div>
@@ -70,4 +72,5 @@ SHA256_HEX
   </div>
 </body>
 </html>
+
 
